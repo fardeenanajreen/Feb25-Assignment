@@ -1,0 +1,28 @@
+def segregateElements(a, n): 
+    temp=[0 for k in range(n)] 
+    j=0 
+    for i in range(n): 
+        if (a[i]>=0 ): 
+            temp[j]=a[i] 
+            j+=1
+   if (j==n or j==0): 
+        return
+    for i in range(n): 
+        if (a[i]<0): 
+            temp[j]=a[i] 
+            j+=1
+   
+    for k in range(n): 
+        a[k]=temp[k] 
+  a=[-16,12,-35,8,22,-30,15,] 
+n=len(a) 
+  segregateElements(a, n); 
+   
+for i in range(n): 
+    print(a[i]) 
+    
+    
+    
+OUTPUT:
+12,8,22,15,-16,-35,-30
+  
